@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BLOOD DONOR</title>
+</head>
+<body>
+<h1>BLOOD DONOR DATA MAINTENANCE</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>BLOOD_GROUP</th>
+        <th>GENDER</th>
+
+        <th>CITY</th>
+        <th>PHONE_NUMBER</th>
+        <th>AVAILABILITY</th>
+        <th>LAST_DONATION</th>
+        <th>DEGREE</th>
+        <th>MAJOR</th>
+        <th>ACADEMIC_YEAR</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+        <th>SEND_SMS</th>
+    </tr>
+    {% for data in datas %}
+    <tr>
+        <td>{{data.ID}}</td>
+        <td>{{data.NAME}}</td>
+        <td>{{data.AGE}}</td>
+        <td>{{data.BLOOD_GROUP}}</td>
+        <td>{{data.GENDER}}</td>
+        <td>{{data.CITY}}</td>
+        <td>{{data.PHONE_NUMBER}}</td>
+        <td>{{data.AVAILABILITY}}</td>
+        <td>{{data.LAST_DONATION}}</td>
+        <td>{{data.DEGREE}}</td>
+        <td>{{data.MAJOR}}</td>
+        <td>{{data.ACADEMIC_YEAR}}</td>
+        <td><a href="{{url_for('editusers',id=data.ID)}}">EDIT</a></td>
+        <td><a onclick="return confirm('Are you sure to delete?');" href="{{url_for('deleteusers',id=data.ID)}}">DELETE</a></td>
+        <td><a onclick="return confirm('Are you sure to SMS?');" href=" {{url_for('sendsms',send_sms=data.PHONE_NUMBER)}}">SEND_SMS</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p><a href="{{url_for('addusers')}}">Add Users</a></p>
+<p><a onclick="return confirm('Are you sure to send Alert Notification?');" href="">Alert Notification</a></p>
+</body>
+</html>
+
+

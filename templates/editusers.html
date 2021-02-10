@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Donor</title>
+</head>
+<body>
+<h1>Update User Details</h1>
+<form action=" " method="post">
+    <label>NAME:</label>
+    <input type="text" name="name" value="{{datas.NAME}}" required ><br>
+    <label>AGE</label>
+    <input type="number" name="age" value="{{datas.AGE}}" required ><br>
+    <label>BLOOD_GROUP</label>
+    <input type="text" name="blood_group" value="{{datas.BLOOD_GROUP}}" required ><br>
+    <label>GENDER</label>
+    <input type="radio" name="gender" required value="Male">
+    Male
+    <input type="radio" name="gender" required value="Female">
+    Female
+    <input type="radio" name="gender" required value="Other">
+    Other<br>
+    <label>HEIGHT </label>
+    <input type="number" name="height" value="{{datas.HEIGHT}}" required ><br>
+    <label>WEIGHT </label>
+    <input type="number" name="weight" value="{{datas.WEIGHT}}" required ><br>
+    <label>ADDRESS </label>
+    <input type="messagebox" name="address" value="{{datas.ADDRESS}}" required ><br>
+    <label>CITY</label>
+    <input type="text" name="city" value="{{datas.CITY}}" required ><br>
+    <label>PHONE_NUMBER </label>
+    <input type="text" name="phone_number" value="{{datas.PHONE_NUMBER}}" required ><br>
+    <label>AVAILABILITY </label>
+    <input type="radio" name="availability" value="{{datas.AVAILABILITY}}" required value="24x7"  >
+    24x7
+    <input type="radio" name="availability" required value="custom"  >
+    Custom<br>
+    <label>LAST_DONATION </label>
+    <input type="date" name="last_donation" value="{{datas.LAST_DONATION}}" required ><br>
+    <label>DEGREE </label>
+    <input type="text" name="degree" value="{{datas.DEGREE}}" required ><br>
+    <label>MAJOR</label>
+    <input type="text" name="major" value="{{datas.MAJOR}}" required ><br>
+    <label>ACADEMIC_YEAR</label>
+    <input type="text" name="academic_year" value="{{datas.ACADEMIC_YEAR}}" required ><br>
+    <input type="submit" value="Update Details">
+</form>
+</body>
+</html>
+
+
+
